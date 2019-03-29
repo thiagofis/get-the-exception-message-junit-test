@@ -9,7 +9,7 @@ public class AssertUtil {
             if(exceptionType.isInstance(ex)){
                 return (T)ex;
             }
-            throw new AssertionError("Expected throw " + exceptionType.getName() + " but threw " + ex.getClass().getTypeName());
+            throw new AssertionError("Expected throw <" + exceptionType.getName() + "> but threw <" + ex.getClass().getTypeName() + ">");
         }
     }
 }
