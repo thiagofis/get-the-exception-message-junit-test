@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.ComparisonFailure;
 import org.junit.Test;
 
 public class ExampleTest {
@@ -9,7 +10,7 @@ public class ExampleTest {
         Action action = () ->  kabumMethod();
 
         // assert
-        Exception ex = AssertUtil.assertThrows(IllegalAccessException.class, action);
+        Exception ex = AssertUtil.assertThrows(IllegalArgumentException.class, action);
         Assert.assertEquals("kabum!!", ex.getMessage());
     }
 
